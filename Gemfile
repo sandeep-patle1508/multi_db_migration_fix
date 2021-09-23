@@ -11,7 +11,7 @@ gem 'activeadmin', '~> 2.9.0'
 # keep those excluded in default group so they are loaded by other processes like rails
 
 group :default, :sidekiq_swarm do
-  gem 'rails', '6.1.4.1'
+  gem 'rails', '6.1.3.2'
   # rails needs to be before blazer to avoid issues in sidekiq
   gem 'aasm', '~> 5.1.1'
   gem 'activerecord-import', '~> 1.0.8', require: false
