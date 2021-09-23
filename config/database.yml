@@ -1,0 +1,38 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: multi_db_test_app_development
+  username: admin
+  password:
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
+
+marketing_sync_board_default: &marketing_sync_board_default
+  <<: *default
+  host: localhost
+  username: admin
+  password:
+  database: marketing_sync_board_development
+  migrations_paths: db/marketing_sync_board_migrate
+
+development:
+  primary:
+    <<: *default
+    database: multi_db_test_app_secondary_development
+  marketing_sync_board:
+    <<: *marketing_sync_board_default
+
+test:
+  primary:
+    <<: *default
+    database: multi_db_test_app_test
+  marketing_sync_board:
+    <<: *marketing_sync_board_default
+    database: multi_db_test_app_secondary_test
+
+production:
+  <<: *default
+  database: multi_db_test_app_production
+  username: multi_db_test_app
+  password: <%= ENV['MULTI_DB_TEST_APP_DATABASE_PASSWORD'] %>
