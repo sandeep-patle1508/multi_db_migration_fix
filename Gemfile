@@ -77,7 +77,6 @@ group :default, :sidekiq_swarm do
   gem 'lograge-sql', '~> 1.3.1'
 
   gem 'mail', '~> 2.7.1'
-  gem 'mandrill-api', git: 'https://github.com/heyjobs/mandrill-api-ruby', branch: 'main'
   gem 'mini_magick', '~> 4.11.0'
 
   gem 'nilify_blanks', '~> 1.3.0'
