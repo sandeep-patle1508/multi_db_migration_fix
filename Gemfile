@@ -25,8 +25,6 @@ group :default, :sidekiq_swarm do
 
   gem 'braze_ruby', '~> 0.4.2'
 
-  gem 'capitalize-names', git: 'https://github.com/heyjobs/capitalize-names'
-
   gem 'carrierwave', '~> 1.3.2'
 
   gem 'coffee-rails', '~> 5.0.0'

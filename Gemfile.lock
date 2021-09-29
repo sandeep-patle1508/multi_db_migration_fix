@@ -1,11 +1,4 @@
 GIT
-  remote: https://github.com/heyjobs/capitalize-names
-  revision: dc770794639562dc5222d2f0e4ecbd0a58a88266
-  specs:
-    capitalize-names (1.0.6)
-      activesupport (>= 3)
-
-GIT
   remote: https://github.com/heyjobs/mandrill-api-ruby
   revision: d1d9cfb5bb84e7949c4ab687eece441ece5ea0cc
   branch: main
@@ -696,7 +689,6 @@ DEPENDENCIES
   bootsnap (~> 1.4.5)
   braze_ruby (~> 0.4.2)
   byebug
-  capitalize-names!
   capybara (>= 3.26)
   carrierwave (~> 1.3.2)
   coffee-rails (~> 5.0.0)
